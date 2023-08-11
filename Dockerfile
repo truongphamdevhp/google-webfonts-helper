@@ -83,6 +83,6 @@ COPY --chown=node:node --from=builder /app/dist /app/dist
 
 ENV NODE_ENV=production
 
-EXPOSE 8080
+EXPOSE 8081
 ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD ["node","dist/server/app.js"]

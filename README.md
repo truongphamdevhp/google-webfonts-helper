@@ -36,8 +36,8 @@ I provide prebuilt Docker images via [GitHub Packages](https://github.com/majode
 ```bash
 # See https://developers.google.com/fonts/docs/developer_api for creating your own API-Key.
 
-docker run -e GOOGLE_FONTS_API_KEY=<YOUR-API-KEY> -p 8080:8080 ghcr.io/majodev/google-webfonts-helper:<TAG>
-# Express server listening on 8080, in production mode
+docker run -e GOOGLE_FONTS_API_KEY=<YOUR-API-KEY> -p 8081:8081 ghcr.io/majodev/google-webfonts-helper:<TAG>
+# Express server listening on 8081, in production mode
 ```
 
 ## Development
@@ -63,14 +63,14 @@ node$ ./node_modules/.bin/bower install
 # start development server
 node$ grunt serve
 # [...]
-# Express server listening on 9000, in development mode
+# Express server listening on 9001, in development mode
 
-# The application is now available at http://127.0.0.1:9000 (watching for code changes)
+# The application is now available at http://127.0.0.1:9001 (watching for code changes)
 
 # start production server (same command as within the final docker multistage build)
 node$ grunt build
 node$ NODE_ENV=production node dist/server/app.js
-# Express server listening on 8080, in production mode
+# Express server listening on 8081, in production mode
 ```
 
 ### Production build
@@ -82,8 +82,8 @@ docker build . -t <your-image-tag>
 
 # Run it (if you have previously started the development container, halt it!)
 ./docker-helper.sh --halt
-docker run -e GOOGLE_FONTS_API_KEY=<YOUR-API-KEY> -p 8080:8080 <your-image-tag>
-# Express server listening on 8080, in production mode
+docker run -e GOOGLE_FONTS_API_KEY=<YOUR-API-KEY> -p 8081:8081 <your-image-tag>
+# Express server listening on 8081, in production mode
 ```
 
 To mitigate security issues especially with the projects' deprecated dependencies, the final image is based on a minimal container image. It runs rootless and has no development dependencies. 

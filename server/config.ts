@@ -26,7 +26,7 @@ export const config = {
   ROOT: path.normalize(__dirname + "/.."),
 
   // Server port
-  PORT: process.env.PORT ? _.parseInt(process.env.PORT) : env === "production" ? 8080 : 9000,
+  PORT: process.env.PORT ? _.parseInt(process.env.PORT) : env === "production" ? 8081 : 9001,
 
   IP: process.env.IP || undefined,
 

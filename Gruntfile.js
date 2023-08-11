@@ -27,7 +27,7 @@ module.exports = function (grunt) {
     },
     express: {
       options: {
-        port: process.env.PORT || 9000,
+        port: process.env.PORT || 9001,
         opts: ['node_modules/.bin/ts-node'],
       },
       dev: {
@@ -137,7 +137,7 @@ module.exports = function (grunt) {
         script: 'server/app.ts',
         options: {
           env: {
-            PORT: process.env.PORT || 9000
+            PORT: process.env.PORT || 9001
           },
           callback: function (nodemon) {
             nodemon.on('log', function (event) {
