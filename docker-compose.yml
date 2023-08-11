@@ -5,8 +5,8 @@ services:
       context: .
       target: development
     ports:
-      - "9000:9000" # development
-      - "8080:8080" # production
+      - "9001:9001" # development
+      - "8081:8081" # production
       - "35729:35729" # livereload
       - "5858:5858" # debugger
       - "9229:9229" # profiler
